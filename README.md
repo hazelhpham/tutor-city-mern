@@ -1,4 +1,4 @@
-# tutor city web app
+# Tutor City Web app
 
 (to be updated) 
 A website to match tutors with students for new york city. 
