@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+// import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 
 function Navbar() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
 
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
 
   const isActive = () => {
     window.scrollY > 0 ? setActive(true) : setActive(false);
@@ -28,16 +28,17 @@ function Navbar() {
   };
 
   return (
-    <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
+    // <div className={active || pathname !== "/" ? "navbar active" : "navbar"}>
+    <div className={active ? "navbar active" : "navbar"}>
       <div className="container">
         <div className="logo">
-          <Link className="link" to="/">
-            <span className="text">liverr</span>
-          </Link>
+          {/* <Link className="link" to="/"> */}
+          <span className="text">TutorCity</span>
+          {/* </Link> */}
           <span className="dot">.</span>
         </div>
         <div className="links">
-          <span>Liverr Business</span>
+          <span>TutorCity Business</span>
           <span>Explore</span>
           <span>English</span>
           {!currentUser?.isSeller && <span>Become a Seller</span>}
@@ -52,15 +53,15 @@ function Navbar() {
                 <div className="options">
                   {currentUser.isSeller && (
                     <>
-                      <Link className="link" to="/mygigs">
+                      {/* <Link className="link" to="/mygigs">
                         Gigs
                       </Link>
                       <Link className="link" to="/add">
                         Add New Gig
-                      </Link>
+                      </Link> */}
                     </>
                   )}
-                  <Link className="link" to="/orders">
+                  {/* <Link className="link" to="/orders">
                     Orders
                   </Link>
                   <Link className="link" to="/messages">
@@ -68,25 +69,26 @@ function Navbar() {
                   </Link>
                   <Link className="link" to="/">
                     Logout
-                  </Link>
+                  </Link> */}
                 </div>
               )}
             </div>
           ) : (
             <>
               <span>Sign in</span>
-              <Link className="link" to="/register">
+              {/* <Link className="link" to="/register">
                 <button>Join</button>
-              </Link>
+              </Link> */}
             </>
           )}
         </div>
       </div>
-      {(active || pathname !== "/") && (
+      {/* {(active || pathname !== "/") && ( */}
+      {active && (
         <>
           <hr />
           <div className="menu">
-            <Link className="link menuLink" to="/">
+            {/* <Link className="link menuLink" to="/">
               Graphics & Design
             </Link>
             <Link className="link menuLink" to="/">
@@ -112,7 +114,7 @@ function Navbar() {
             </Link>
             <Link className="link menuLink" to="/">
               Lifestyle
-            </Link>
+            </Link> */}
           </div>
           <hr />
         </>
