@@ -79,6 +79,7 @@ function Navbar() {
               {/* <Link className="link" to="/register">
                 <button>Join</button>
               </Link> */}
+              <button>Join</button>
             </>
           )}
         </div>
