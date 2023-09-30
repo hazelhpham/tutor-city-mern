@@ -20,3 +20,6 @@ Tech stack
 
 
 # BE 
+1. node.js
+2. express
+3. 
